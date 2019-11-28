@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Mes</title>
-    <!--<link rel="stylesheet" href="style.css" /> -->
+    <title>Заявка на курьера</title>
+    <link rel="stylesheet" href="style.css" /> 
     <link rel="stylesheet" href="https://unpkg.com/@clr/ui/clr-ui.min.css" />
   </head>
   <header class="header-6">
@@ -31,16 +31,95 @@
   <body>
       <form novalidate class="clr-form">
           <div class="clr-form-control">
-            <label for="example" class="clr-control-label">Label</label>
+            <label for="example" class="clr-control-label">Заявитель</label>
+            <div class="clr-control-container clr-control-container_applicant clr-error">
+              <div class="clr-input-wrapper">
+                <input type="text" id="example" placeholder="Введите ФИО заявителя" required class="clr-input clr-input_applicant">
+              </div>
+              <span class="clr-subtext clr-subtext_applicant"></span>
+            </div>
+          </div>
+          <div class="clr-form-control">
+            <label for="example" class="clr-control-label">Телефон заявителя</label>
+            <div class="clr-control-container clr-control-container_tel_applicant clr-error">
+              <div class="clr-input-wrapper">
+                <input type="text" id="example" placeholder="Введите телефон" pattern="^\+?\d{1}\s?\(?\d{3}\)?\s?-?\d{3}-?\s?\d{2}-?\s?\d{2}$" required class="clr-input clr-input_tel_applicant">
+              </div>
+              <span class="clr-subtext clr-subtext_tel_applicant"></span>
+            </div>
+          </div>
+          <div class="clr-form-control">
+            <label for="example" class="clr-control-label">Почта заявителя</label>
+            <div class="clr-control-container clr-control-container_mail_applicant clr-error">
+              <div class="clr-input-wrapper">
+                <input type="text" id="example" placeholder="Введите почту" pattern="^[a-z0-9\/.\/_\/-]{2,50}@[a-z0-9]{2,50}\.[a-z]{2,10}(\.[a-z]{2,10})?$" required class="clr-input clr-input_mail_applicant">
+              </div>
+              <span class="clr-subtext clr-subtext_mail_applicant"></span>
+            </div>
+          </div>
+          <div class="clr-form-control">
+            <label for="example" class="clr-control-label">Откуда</label>
+            <div class="clr-control-container clr-control-container_where_from clr-error">
+              <div class="clr-input-wrapper">
+                <input type="text" id="example" placeholder="Введите адрес" pattern="dd" required class="clr-input clr-input_where_from">
+              </div>
+              <span class="clr-subtext clr-subtext_where_from"></span>
+            </div>
+          </div>
+          <div class="clr-form-control">
+            <label for="example" class="clr-control-label">Куда</label>
+            <div class="clr-control-container clr-control-container_where clr-error">
+              <div class="clr-input-wrapper">
+                <input type="text" id="example" placeholder="Введите адрес" pattern="dd" required class="clr-input clr-input_where">
+              </div>
+              <span class="clr-subtext clr-subtext_where"></span>
+            </div>
+          </div>
+          <div class="clr-form-control">
+            <label for="example" class="clr-control-label">Получатель</label>
+            <div class="clr-control-container clr-control-container_recipient clr-error">
+              <div class="clr-input-wrapper">
+                <input type="text" id="example" placeholder="Введите ФИО получателя" pattern="dd" required class="clr-input clr-input_recipient">
+              </div>
+              <span class="clr-subtext clr-subtext_recipient"></span>
+            </div>
+          </div>
+          <div class="clr-form-control">
+            <label for="example" class="clr-control-label">Телефон получателя</label>
+            <div class="clr-control-container clr-control-container_tel_recipient clr-error">
+              <div class="clr-input-wrapper">
+                <input type="text" id="example" placeholder="Введите телефон" pattern="^\+?\d{1}\s?\(?\d{3}\)?\s?-?\d{3}-?\s?\d{2}-?\s?\d{2}$" required class="clr-input clr-input_tel_recipient">
+              </div>
+              <span class="clr-subtext clr-subtext_tel_recipient"></span>
+            </div>
+          </div>
+          <div class="clr-form-control">
+            <label for="example" class="clr-control-label">Дата</label>
             <div class="clr-control-container clr-control-container_1 clr-error">
               <div class="clr-input-wrapper">
-                <input type="text" id="example" placeholder="Example Input" pattern="dd" required class="clr-input clr-input_1">
-                <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
+                <input type="text" id="example" placeholder="Введите дату" pattern="dd" required class="clr-input clr-input_1">
               </div>
               <span class="clr-subtext clr-subtext_1"></span>
             </div>
           </div>
-          
+          <div class="clr-form-control">
+            <label for="example" class="clr-control-label">Время</label>
+            <div class="clr-control-container clr-control-container_1 clr-error">
+              <div class="clr-input-wrapper">
+                <input type="text" id="example" placeholder="Введите время" pattern="dd" required class="clr-input clr-input_1">
+              </div>
+              <span class="clr-subtext clr-subtext_1"></span>
+            </div>
+          </div>
+          <div class="clr-form-control">
+            <label for="vertical-textarea-basic" class="clr-control-label">Комментарий</label>
+            <div class="clr-control-container">
+              <div class="clr-textarea-wrapper">
+                <textarea id="vertical-textarea-basic" placeholder="Здесь можно написать, что надо отвезти/забрать и тд" class="clr-textarea"></textarea>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-success">отправить</button>
         </form>
     <script src="js/application.js"></script>
   </body>

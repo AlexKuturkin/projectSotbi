@@ -1,12 +1,12 @@
 // массив с заявками
 const applications = [
-  { "applicant": "Петров", "tel_applicant": "+7 916 940 00 00", "where_from": "Москва, Шмитовский проезд, 4", "where": "Долгопрудный, Лукьянова, 5", 
+  { "applicant": "Петров", "tel_applicant": "+7 916 940 00 00", "mail_applicant": "ss@mail.ru", "where_from": "Москва, Шмитовский проезд, 4", "where": "Долгопрудный, Лукьянова, 5", 
   "recipient": "Анжела Петренко", "tel_recipient": "+7 910 770 00 00", "when": "27.11.2019", "time": "c 10 до 12",
   "comment": "предварительно позвонить за 30 мин", "courier": "Лудов", "status": "запланировано" },
-  { "applicant": "Иванов", "tel_applicant": "+7 916 940 00 00", "where_from": "Москва, Шмитовский проезд, 4", "where": "Долгопрудный, Лукьянова, 5", 
+  { "applicant": "Иванов", "tel_applicant": "+7 916 940 00 00", "mail_applicant": "anton@mail.ru", "where_from": "Москва, Ивановский проезд, 44", "where": "Москва, Пятницкое шоссе, 66", 
   "recipient": "Кристина Вудина", "tel_recipient": "+7 910 770 00 00", "when": "27.11.2019", "time": "c 10 до 12",
   "comment": "предварительно позвонить за 30 мин обязательно, очень важно и срочно!!предварительно позвонить за 30 мин обязательно, очень важно и срочно!!!!", "courier": "Лудов", "status": "принято к исполнению" },
-  { "applicant": "Сидоров", "tel_applicant": "+7 916 940 00 00", "where_from": "Москва, Шмитовский проезд, 4", "where": "Долгопрудный, Лукьянова, 5", 
+  { "applicant": "Сидоров", "tel_applicant": "+7 916 940 00 00", "mail_applicant": "sergey@mail.ru", "where_from": "Москва, площадь Курчатова, 19", "where": "Химки, ул. Долгорукова, 13", 
   "recipient": "Валентина Татар", "tel_recipient": "+7 910 770 00 00", "when": "27.11.2019", "time": "c 10 до 12",
   "comment": "", "courier": "Лудов", "status": "отменено" },
 ];
@@ -45,6 +45,7 @@ function render() {
     <tr>
         <th>${applications[k].applicant}</th>
         <th>${applications[k].tel_applicant}</th>
+        <th>${applications[k].mail_applicant}</th>
         <th>${applications[k].where_from}</th>
         <th>${applications[k].where}</th>
         <th>${applications[k].recipient}</th>
