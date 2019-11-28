@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Mes</title>
+    <link rel="stylesheet" href="https://unpkg.com/@clr/ui/clr-ui.min.css" />
+  </head>
+  <header class="header-6">
+    <div class="branding">
+        <a href="https://sotbi.ru/" target="_blank" class="nav-link"><clr-icon><svg width="36" height="26" viewBox="0 0 36 26">
+        <g fill="none" fill-rule="evenodd">
+          <path
+            fill="#23A1D1"
+            d="M32.919 6.729L26.201 0H13.252l9.698 9.716h12.952zM6.563 12.95l7.718-8.925.434-.499-.051-.059-2.426-2.429L11.202 0l-3.48 4.025L0 12.95l7.665 8.861 3.508 4.054 1.065-1.067 2.451-2.456-.458-.531z"
+          ></path>
+          <path
+            fill="#F93"
+            d="M29.937 16.189h-6.989l-9.696 9.715H26.2l6.718-6.728 2.982-2.987z"
+          ></path>
+        </g>
+      </svg></clr-icon></a>
+    </div>
+    <div class="header-nav">
+      <a href="" class="active nav-link nav-text">Список заявок на курьера</a>
+      <a href="application.html" class="nav-link nav-text">Заявка на курьера</a>
+    </div>
+  </header>
+  <body>
+    <form class="clr-form">
+      <input
+        type="text"
+        id="basic"
+        placeholder="Здесь можно искать"
+        class="clr-input"
+      />
+    </form>
+    <table class="table table-compact">
+      <thead>
+        <tr>
+          <th>Заявитель</th>
+          <th>Телефон заявителя</th>
+          <th>Откуда</th>
+          <th>Куда</th>
+          <th>Получатель</th>
+          <th>Телефон получателя</th>
+          <th>Когда</th>
+          <th>Время</th>
+          <th>Комментарий</th>
+          <th>Курьер</th>
+          <th>Статус</th>
+        </tr>
+      </thead>
+      <tbody class="tbody"></tbody>
+    </table>
+    <script src="./js/list.js"></script>
+  </body>
+</html>
