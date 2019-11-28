@@ -1,9 +1,18 @@
 .clr-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.clr-error .clr-input:not([readonly]), .clr-input:not([readonly]), .clr-textarea.clr-textarea {
-    width: 300px;
+.clr-error .clr-input:not([readonly]),
+.clr-input:not([readonly]),
+.clr-textarea.clr-textarea {
+  width: 300px;
+}
+
+.btn.btn-success_save {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 50px;
 }

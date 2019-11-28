@@ -1,14 +1,14 @@
 // массив с заявками
 const applications = [
   { "applicant": "Петров", "tel_applicant": "+7 916 940 00 00", "mail_applicant": "ss@mail.ru", "where_from": "Москва, Шмитовский проезд, 4", "where": "Долгопрудный, Лукьянова, 5", 
-  "recipient": "Анжела Петренко", "tel_recipient": "+7 910 770 00 00", "when": "27.11.2019", "time": "c 10 до 12",
-  "comment": "предварительно позвонить за 30 мин", "courier": "Лудов", "status": "запланировано" },
+  "recipient": "Анжела Петренко", "tel_recipient": "+7 910 770 00 00", "date": "27.11.2019", "time": "c 10 до 12",
+  "comment": "предварительно позвонить за 30 мин" },
   { "applicant": "Иванов", "tel_applicant": "+7 916 940 00 00", "mail_applicant": "anton@mail.ru", "where_from": "Москва, Ивановский проезд, 44", "where": "Москва, Пятницкое шоссе, 66", 
-  "recipient": "Кристина Вудина", "tel_recipient": "+7 910 770 00 00", "when": "27.11.2019", "time": "c 10 до 12",
-  "comment": "предварительно позвонить за 30 мин обязательно, очень важно и срочно!!предварительно позвонить за 30 мин обязательно, очень важно и срочно!!!!", "courier": "Лудов", "status": "принято к исполнению" },
+  "recipient": "Кристина Вудина", "tel_recipient": "+7 910 770 00 00", "date": "27.11.2019", "time": "c 10 до 12",
+  "comment": "предварительно позвонить за 30 мин обязательно, очень важно и срочно!!предварительно позвонить за 30 мин обязательно, очень важно и срочно!!!!" },
   { "applicant": "Сидоров", "tel_applicant": "+7 916 940 00 00", "mail_applicant": "sergey@mail.ru", "where_from": "Москва, площадь Курчатова, 19", "where": "Химки, ул. Долгорукова, 13", 
-  "recipient": "Валентина Татар", "tel_recipient": "+7 910 770 00 00", "when": "27.11.2019", "time": "c 10 до 12",
-  "comment": "", "courier": "Лудов", "status": "отменено" },
+  "recipient": "Валентина Татар", "tel_recipient": "+7 910 770 00 00", "date": "27.11.2019", "time": "c 10 до 12",
+  "comment": "" },
 ];
 
 
@@ -50,11 +50,11 @@ function render() {
         <th>${applications[k].where}</th>
         <th>${applications[k].recipient}</th>
         <th>${applications[k].tel_recipient}</th>
-        <th>${applications[k].when}</th>
+        <th>${applications[k].date}</th>
         <th>${applications[k].time}</th>
         <th>${applications[k].comment}</th>
         <th><select id="select-basic" class="clr-select">
-            <option value="1">Мелкадзе</option>
+            <option value="1">Мелков</option>
             <option value="2">Сидорчук</option>
             <option value="3">Пятерочкин</option>
         </select></th>
@@ -69,10 +69,9 @@ function render() {
     }
 }
 
-// вызов функции, чтобы при загрузке страницы была видна вся таблица
+// вызов функции, чтобы при загрузке страницы были видны все заявки
 render();
 
 // слушатели
 // запускаем функцию поиска при инпуте
 phrase.addEventListener("input", tableSearch)
-
